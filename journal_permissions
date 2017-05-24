@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "+ changing permissions in $PWD"
+find ~/journal/ -type f -exec chmod u-w {} \;
