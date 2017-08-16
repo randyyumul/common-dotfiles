@@ -21,6 +21,7 @@ alias lt='ls -ltr -G'
 alias mv='mv -i'
 alias rm='rm -i'
 alias up='sudo ifconfig en1 up'
+alias vlast='vim `ls -t | head -n1`'
 
 # git
 alias g='git status'
