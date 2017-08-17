@@ -40,8 +40,9 @@ WHITE="\[\033[1;37m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 DARK_GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[1;33m\]"
+BLUE="\[\033[0;34m\]"
 #PS1="[$MAGENTA\! $NO_COLOR\u@\h $YELLOW\w$NO_COLOR]\n\$ "
-PS1="[$MAGENTA\! $DARK_GREEN\u@\h $YELLOW\w$NO_COLOR]\n\$ "
+PS1="[$MAGENTA\! $DARK_GREEN\u@\h $BLUE\w$NO_COLOR]\n\$ "
 
 # use vi mode from shell
 set -o vi
