@@ -27,7 +27,7 @@ alias jci='git add . && git ci -m "update" && git push'
 
 # git
 alias g='git status'
-alias gd='git diff'
+alias gd='cls; git diff'
 alias gitv='vim `git status --short | awk '"'"'{print $2}'"'"'`'
 
 # other
