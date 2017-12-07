@@ -49,8 +49,8 @@ PS1="[$MAGENTA\! $DARK_GREEN\u@\h $BLUE\w$NO_COLOR]\n\$ "
 # use vi mode from shell
 set -o vi
 
-# easier entry into vim
-alias v='vim'
+# run CtrlP from commandline
+alias v='vim -c CtrlP'
 
 # CTRL-P menu completion (like zsh)
 # haven't figured out how to do CTRL-N yet
