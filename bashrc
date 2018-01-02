@@ -32,6 +32,9 @@ alias gitv='vim `git status --short | awk '"'"'{print $2}'"'"'`'
 
 # other
 
+# open wiki
+alias jw='vim ~/vimwiki/index.wiki'
+
 # allow vim to be man pager
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
 
