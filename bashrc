@@ -58,6 +58,7 @@ alias v='vim -c CtrlP'
 # CTRL-P menu completion (like zsh)
 # haven't figured out how to do CTRL-N yet
 bind '"":menu-complete'
+bind '"":menu-complete-backward'
 
 # save history across sessions
 shopt -s histappend
