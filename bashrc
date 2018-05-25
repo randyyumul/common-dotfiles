@@ -29,11 +29,12 @@ alias jci='git add . && git ci -m "update" && git push'
 alias g='git status'
 alias gd='cls; git diff'
 alias gitv='vim `git status --short | awk '"'"'{print $2}'"'"'`'
+alias gitup='cd `git rev-parse --show-toplevel`'
 
 # other
 
 # open wiki
-alias jw='vim ~/vimwiki/index.wiki'
+alias vw='vim ~/vimwiki/index.wiki'
 
 # allow vim to be man pager
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
