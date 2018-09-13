@@ -25,6 +25,10 @@ alias up='sudo ifconfig en1 up'
 alias vlast='vim `ls -t | head -n1`'
 alias jci='git add . && git ci -m "update" && git push'
 
+# toggle function keys
+alias fon='defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.keyboard.fnState -bool true'
+alias foff='defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.keyboard.fnState -bool false'
+
 # git
 alias g='git status'
 alias gd='cls; git diff'
@@ -55,6 +59,7 @@ set -o vi
 
 # run CtrlP from commandline
 alias v='vim -c CtrlP'
+alias m='mvim -c CtrlP'
 
 # CTRL-P menu completion (like zsh)
 # haven't figured out how to do CTRL-N yet
@@ -70,3 +75,16 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 # shell integration; automatic profile switching
 echo -e "\033]50;SetProfile=Default\a"
 
+# functions
+
+# start a countdown
+function countdown() {
+	SEC=$1
+	for ((i=SEC; i>=0; i--)) ; do
+		echo -ne "\r$i"
+		sleep 1
+	done
+	say "Done"
+	say "Done"
+	say "Done"
+}
