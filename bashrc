@@ -6,7 +6,7 @@ alias down='sudo ifconfig en1 down'
 alias fnogit='find . -name ".git*" \( -type d -o -type f \) -prune -o -print'
 alias hh='vim ~/Dropbox/Apps/TaskAgent/HomeTodo.txt'
 alias hist='history'
-alias jj='vim ~/journal/log`date "+%Y-%m-%d"`.txt'
+alias jj='vim ~/vimwiki/diary/`date "+%Y-%m-%d"`.wiki'
 alias jk='vim ~/journal-home/log`date "+%Y-%m-%d"`.txt'
 alias l.='ls -dF -G \.[a-zA-Z]*'
 alias l.l='ls -dFl -G \.[a-zA-Z]*'
@@ -29,14 +29,15 @@ alias fon='defaults write ~/Library/Preferences/.GlobalPreferences.plist com.app
 alias foff='defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.keyboard.fnState -bool false'
 
 # git
-alias vg='vim -c "Gstatus"'
 alias g='git status'
+alias gb='git branch'
 alias gd='cls; git diff'
 alias gdc='cls; git diff --cached'
-alias gl='cls; git log'
-alias gb='git branch'
-alias gitv='vim `git status --short | awk '"'"'{print $2}'"'"'`'
 alias gitup='cd `git rev-parse --show-toplevel`'
+alias gitv='vim `git status --short | awk '"'"'{print $2}'"'"'`'
+alias gl='cls; git log'
+alias gsh='git show HEAD --name-only'
+alias vg='vim -c "Gstatus"'
 
 # other
 
@@ -60,6 +61,9 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/:\1/'
 }
 PS1="[$MAGENTA\! $DARK_GREEN\u@\h$NO_COLOR\$(parse_git_branch) $BLUE\w$NO_COLOR]\n\$ "
+
+# default editor
+export EDITOR=vim
 
 # use vi mode from shell
 set -o vi
